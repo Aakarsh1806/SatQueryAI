@@ -1,0 +1,1 @@
+20 distinct VRSBench validation QA images and 3 additional caption images. questions.json uses image/question/answer; captions.json uses image/caption. Filenames are relative to this folder. QA has no adapter suffix. Test inputs only; see ../README.md for provenance and licensing.

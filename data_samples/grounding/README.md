@@ -1,0 +1,1 @@
+10 VRSBench validation images with real phrases and absolute-pixel xyxy boxes in boxes.json. Derived from normalized four-vertex obj_corner envelopes, clipped to image bounds. See ../README.md for conversion and provenance. Test inputs only.

@@ -1,0 +1,783 @@
+{
+  "timestamp": "2026-11-11T09:20:15.502370+00:00",
+  "summary": {
+    "samples": 10,
+    "errors": 0,
+    "mean_IoU": 0.36726,
+    "Acc@0.5": "4/10 (40.0%)",
+    "total_seconds": 13.345
+  },
+  "environment": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "pycocoevalcap": "1.2"
+  },
+  "results": [
+    {
+      "index": 1,
+      "image": "P0003_0002.png",
+      "phrase": "The large yellow vehicle situated closest to the green area.",
+      "truth": [
+        [
+          131.0,
+          205.0,
+          171.0,
+          309.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/56cca933-76e3-4c00-84f5-971629362d87/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            126.56884002685547,
+            206.07669067382812,
+            169.38906860351562,
+            308.1901550292969
+          ]
+        ],
+        "labels": [
+          "the large yellow vehicle situated closest to the green area"
+        ],
+        "scores": [
+          0.3095705807209015
+        ]
+      },
+      "iou": 0.8498768248413697,
+      "acc_at_05": true,
+      "boxes": 1,
+      "example": "[view](model2_examples/01_P0003_0002.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 4123.578416998498,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large yellow vehicle situated closest to the green area.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0003_0002.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/56cca933-76e3-4c00-84f5-971629362d87/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/56cca933-76e3-4c00-84f5-971629362d87/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 4.248
+    },
+    {
+      "index": 2,
+      "image": "P0003_0004.png",
+      "phrase": "The large vehicle is situated towards the middle-left side of the image.",
+      "truth": [
+        [
+          8.0,
+          205.0,
+          48.0,
+          309.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/36511c5d-f818-4acc-9904-a53057ce9aa6/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            320.2079772949219,
+            151.44325256347656,
+            351.7762145996094,
+            188.4663543701172
+          ],
+          [
+            316.0498962402344,
+            417.1595153808594,
+            345.3970642089844,
+            459.7353820800781
+          ]
+        ],
+        "labels": [
+          "the large vehicle is situated towards the middle - left side of the image",
+          "the large vehicle is situated towards the middle - left side of the image"
+        ],
+        "scores": [
+          0.3723750114440918,
+          0.35205650329589844
+        ]
+      },
+      "iou": 0.0,
+      "acc_at_05": false,
+      "boxes": 2,
+      "example": "[view](model2_examples/02_P0003_0004.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 1005.9342080494389,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle is situated towards the middle-left side of the image.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0003_0004.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/36511c5d-f818-4acc-9904-a53057ce9aa6/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/36511c5d-f818-4acc-9904-a53057ce9aa6/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 1.121
+    },
+    {
+      "index": 3,
+      "image": "P0007_0001.png",
+      "phrase": "The small vehicle located towards the top of the image.",
+      "truth": [
+        [
+          130.0,
+          30.0,
+          181.0,
+          54.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/fa66bb79-1320-46fa-bcdd-7e8073d7b028/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            130.29714965820312,
+            29.63292694091797,
+            181.38250732421875,
+            52.120460510253906
+          ]
+        ],
+        "labels": [
+          "the small vehicle located towards the top of the image"
+        ],
+        "scores": [
+          0.3587303161621094
+        ]
+      },
+      "iou": 0.8963862530275882,
+      "acc_at_05": true,
+      "boxes": 1,
+      "example": "[view](model2_examples/03_P0007_0001.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 716.3345000008121,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the small vehicle located towards the top of the image.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0007_0001.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/fa66bb79-1320-46fa-bcdd-7e8073d7b028/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/fa66bb79-1320-46fa-bcdd-7e8073d7b028/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 0.827
+    },
+    {
+      "index": 4,
+      "image": "P0007_0004.png",
+      "phrase": "The large vehicle is at the left edge of the road.",
+      "truth": [
+        [
+          30.0,
+          127.0,
+          66.0,
+          292.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/181af6a0-6e3d-47fd-afd0-a6d65879b0dd/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            34.923736572265625,
+            118.63360595703125,
+            67.4791030883789,
+            178.83151245117188
+          ]
+        ],
+        "labels": [
+          "the large vehicle is at the left edge of the road"
+        ],
+        "scores": [
+          0.4226120710372925
+        ]
+      },
+      "iou": 0.25611714516854217,
+      "acc_at_05": false,
+      "boxes": 1,
+      "example": "[view](model2_examples/04_P0007_0004.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 1092.2448750352487,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle is at the left edge of the road.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0007_0004.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/181af6a0-6e3d-47fd-afd0-a6d65879b0dd/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/181af6a0-6e3d-47fd-afd0-a6d65879b0dd/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 1.203
+    },
+    {
+      "index": 5,
+      "image": "P0007_0005.png",
+      "phrase": "The large vehicle located on the right side.",
+      "truth": [
+        [
+          400.0,
+          307.0,
+          434.0,
+          483.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/7584624b-0e37-4958-91c0-a6d63f9057f5/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [],
+        "labels": [],
+        "scores": []
+      },
+      "iou": 0.0,
+      "acc_at_05": false,
+      "boxes": 0,
+      "example": "[view](model2_examples/05_P0007_0005.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 1111.0917089972645,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle located on the right side.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0007_0005.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/7584624b-0e37-4958-91c0-a6d63f9057f5/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/7584624b-0e37-4958-91c0-a6d63f9057f5/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 1.225
+    },
+    {
+      "index": 6,
+      "image": "P0007_0006.png",
+      "phrase": "The large vehicle is located at the right edge extending beyond the image frame.",
+      "truth": [
+        [
+          495.0,
+          117.0,
+          512.0,
+          273.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/31a0d850-d1ce-4281-b9b6-856c639c109a/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [],
+        "labels": [],
+        "scores": []
+      },
+      "iou": 0.0,
+      "acc_at_05": false,
+      "boxes": 0,
+      "example": "[view](model2_examples/06_P0007_0006.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 724.6313749346882,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle is located at the right edge extending beyond the image frame.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0007_0006.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/31a0d850-d1ce-4281-b9b6-856c639c109a/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/31a0d850-d1ce-4281-b9b6-856c639c109a/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 0.838
+    },
+    {
+      "index": 7,
+      "image": "P0007_0009.png",
+      "phrase": "The large vehicle located at the far right top of the image.",
+      "truth": [
+        [
+          150.0,
+          3.0,
+          328.0,
+          36.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/420c79a5-670b-4d64-8ddc-99b3cbd5590b/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [],
+        "labels": [],
+        "scores": []
+      },
+      "iou": 0.0,
+      "acc_at_05": false,
+      "boxes": 0,
+      "example": "[view](model2_examples/07_P0007_0009.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 1098.1561669614166,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle located at the far right top of the image.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0007_0009.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/420c79a5-670b-4d64-8ddc-99b3cbd5590b/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/420c79a5-670b-4d64-8ddc-99b3cbd5590b/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 1.215
+    },
+    {
+      "index": 8,
+      "image": "P0019_0000.png",
+      "phrase": "The vehicle is parked on a driveway, located near the bottom-middle of the image.",
+      "truth": [
+        [
+          246.0,
+          347.0,
+          283.0,
+          396.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/773686d8-0a38-4356-943e-a176592f6faf/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            248.6597900390625,
+            346.9036560058594,
+            280.116943359375,
+            394.4969177246094
+          ]
+        ],
+        "labels": [
+          "the vehicle is parked on a driveway, located near the bottom - middle of the image"
+        ],
+        "scores": [
+          0.4448655843734741
+        ]
+      },
+      "iou": 0.8227381930778588,
+      "acc_at_05": true,
+      "boxes": 1,
+      "example": "[view](model2_examples/08_P0019_0000.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 848.407500074245,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the vehicle is parked on a driveway, located near the bottom-middle of the image.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0019_0000.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/773686d8-0a38-4356-943e-a176592f6faf/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/773686d8-0a38-4356-943e-a176592f6faf/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 0.967
+    },
+    {
+      "index": 9,
+      "image": "P0019_0001.png",
+      "phrase": "The large vehicle is parked on a driveway to the left of the house.",
+      "truth": [
+        [
+          98.0,
+          218.0,
+          124.0,
+          278.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/119caffe-fb97-415b-a180-2eb10a94727a/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            97.09151458740234,
+            214.7836456298828,
+            125.4388656616211,
+            276.2796630859375
+          ]
+        ],
+        "labels": [
+          "the large vehicle is parked on a driveway to the left of the house"
+        ],
+        "scores": [
+          0.5165455341339111
+        ]
+      },
+      "iou": 0.8474775849054927,
+      "acc_at_05": true,
+      "boxes": 1,
+      "example": "[view](model2_examples/09_P0019_0001.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 731.4057919429615,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the large vehicle is parked on a driveway to the left of the house.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0019_0001.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/119caffe-fb97-415b-a180-2eb10a94727a/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/119caffe-fb97-415b-a180-2eb10a94727a/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 0.846
+    },
+    {
+      "index": 10,
+      "image": "P0019_0002.png",
+      "phrase": "The harbor located near the top right corner of the image extending into the water.",
+      "truth": [
+        [
+          340.0,
+          0.0,
+          496.0,
+          119.0
+        ]
+      ],
+      "predicted": {
+        "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/bce02f54-ad48-4c3d-99ba-28b22bd52353/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [],
+        "labels": [],
+        "scores": []
+      },
+      "iou": 0.0,
+      "acc_at_05": false,
+      "boxes": 0,
+      "example": "[view](model2_examples/10_P0019_0002.png)",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 737.1234999736771,
+        "device": "mps",
+        "parameters": {
+          "prompt": "the harbor located near the top right corner of the image extending into the water.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/grounding/P0019_0002.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/bce02f54-ad48-4c3d-99ba-28b22bd52353/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/uploads/prepared/bce02f54-ad48-4c3d-99ba-28b22bd52353/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated",
+        "warnings": [
+          "Grounding model is unvalidated: no measured accuracy metrics or genuine satellite-image box check have been supplied.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      },
+      "seconds": 0.855
+    }
+  ]
+}

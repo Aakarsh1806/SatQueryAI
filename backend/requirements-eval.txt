@@ -1,0 +1,3 @@
+# Optional Python-only BLEU-4 / ROUGE-L / CIDEr evaluation.
+# The scripts do not invoke the package's Java METEOR/SPICE/PTB components.
+pycocoevalcap==1.2

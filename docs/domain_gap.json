@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-11-11T09:21:36.332658+00:00",
+  "summary": {
+    "status": "not run",
+    "samples": 0
+  },
+  "environment": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "pycocoevalcap": "1.2"
+  },
+  "results": []
+}

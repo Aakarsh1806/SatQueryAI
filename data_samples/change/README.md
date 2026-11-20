@@ -1,0 +1,1 @@
+5 LEVIR-CC test pairs; A=before, B=after. captions.txt contains 3 tab-separated fields per line: A filename, B filename, one original raw reference. Repeated pair filenames retain all references. One no-change pair is included. Test inputs only.

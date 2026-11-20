@@ -1,0 +1,740 @@
+{
+  "timestamp": "2026-11-11T09:20:33.688660+00:00",
+  "summary": {
+    "pairs": 5,
+    "references": 25,
+    "errors": 0,
+    "BLEU-4": 0.2701829278676448,
+    "ROUGE-L": 0.537653285581111,
+    "CIDEr": 0.6845100418628902,
+    "METEOR": "not computed",
+    "all_captions_identical": false,
+    "total_seconds": 8.971
+  },
+  "environment": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "pycocoevalcap": "1.2"
+  },
+  "results": [
+    {
+      "index": 1,
+      "before": "test_000001_A.png",
+      "after": "test_000001_B.png",
+      "references": [
+        " there is no difference .",
+        " the two scenes seem identical .",
+        " the scene is the same as before .",
+        " no change has occurred .",
+        " almost nothing has changed ."
+      ],
+      "reference_text": " there is no difference . |  the two scenes seem identical . |  the scene is the same as before . |  no change has occurred . |  almost nothing has changed .",
+      "predicted": "the two scenes seem identical",
+      "concerns": "",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Chg2Cap",
+        "version": "chg2cap-7b8cda9-best",
+        "runtime_ms": 2520.7305420190096,
+        "device": "mps",
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000001_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000001_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000001_A.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-937ch2os/native_before.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-937ch2os/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000001_B.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-937ch2os/native_after.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-937ch2os/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            392,
+            330,
+            332,
+            188,
+            3
+          ],
+          "process_peak_rss_bytes": 3354034176,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 2.63
+    },
+    {
+      "index": 2,
+      "before": "test_000004_A.png",
+      "after": "test_000004_B.png",
+      "references": [
+        " the vegetation has been replaced by a road and many villas around .",
+        " trees are removed and an arc road is built with some buildings around .",
+        " a winding road is built and many houses are constructed beside it to replace the former vegetation .",
+        " forest is taken by the houses along the road .",
+        " the former forest has been replaced by a residential area with roads and houses ."
+      ],
+      "reference_text": " the vegetation has been replaced by a road and many villas around . |  trees are removed and an arc road is built with some buildings around . |  a winding road is built and many houses are constructed beside it to replace the former vegetation . |  forest is taken by the houses along the road . |  the former forest has been replaced by a residential area with roads and houses .",
+      "predicted": "the woods are removed and a t-shaped road with villas built along the roads",
+      "concerns": "",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Chg2Cap",
+        "version": "chg2cap-7b8cda9-best",
+        "runtime_ms": 1478.870457969606,
+        "device": "mps",
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000004_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000004_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000004_A.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-jlgpn8c7/native_before.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-jlgpn8c7/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000004_B.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-jlgpn8c7/native_after.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-jlgpn8c7/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            432,
+            23,
+            298,
+            16,
+            4,
+            368,
+            312,
+            428,
+            410,
+            60,
+            12,
+            372,
+            313,
+            3
+          ],
+          "process_peak_rss_bytes": 3559931904,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 1.585
+    },
+    {
+      "index": 3,
+      "before": "test_000017_A.png",
+      "after": "test_000017_B.png",
+      "references": [
+        " a road appears at the bottom and many houses are scattered replacing the trees .",
+        " trees are removed and neatly arranged residential buildings with a circular road at the top of the area and a turning road through the buildings .",
+        " a road is built and many villas are constructed neatly on both sides of it .",
+        " a forest is built into residential areas and roads .",
+        " the desert has turned into a residential area with road which houses are built alongside ."
+      ],
+      "reference_text": " a road appears at the bottom and many houses are scattered replacing the trees . |  trees are removed and neatly arranged residential buildings with a circular road at the top of the area and a turning road through the buildings . |  a road is built and many villas are constructed neatly on both sides of it . |  a forest is built into residential areas and roads . |  the desert has turned into a residential area with road which houses are built alongside .",
+      "predicted": "the plants are removed and a residential area with many neatly arranged houses are built along",
+      "concerns": "",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Chg2Cap",
+        "version": "chg2cap-7b8cda9-best",
+        "runtime_ms": 1520.7019170047715,
+        "device": "mps",
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000017_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000017_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000017_A.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-vgmf3b3w/native_before.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-vgmf3b3w/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000017_B.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-vgmf3b3w/native_after.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-vgmf3b3w/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            280,
+            23,
+            298,
+            16,
+            4,
+            306,
+            24,
+            428,
+            232,
+            246,
+            27,
+            186,
+            23,
+            60,
+            12,
+            3
+          ],
+          "process_peak_rss_bytes": 3588194304,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 1.618
+    },
+    {
+      "index": 4,
+      "before": "test_000018_A.png",
+      "after": "test_000018_B.png",
+      "references": [
+        " the road has been rebuilt and the plants have been replaced by many villas .",
+        " trees and the road are replaced by a new road with neatly arranged residential buildings and another circular road at the top .",
+        " a road is built and many villas are constructed on both sides of it and the vegetation is also replaced by houses .",
+        " a large number of trees and space are replaced by a residential area and road .",
+        " the woods with a road going through have turned into the residential area with roads and houses ."
+      ],
+      "reference_text": " the road has been rebuilt and the plants have been replaced by many villas . |  trees and the road are replaced by a new road with neatly arranged residential buildings and another circular road at the top . |  a road is built and many villas are constructed on both sides of it and the vegetation is also replaced by houses . |  a large number of trees and space are replaced by a residential area and road . |  the woods with a road going through have turned into the residential area with roads and houses .",
+      "predicted": "the plants are removed and a residential area with many villas built along the roads",
+      "concerns": "",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Chg2Cap",
+        "version": "chg2cap-7b8cda9-best",
+        "runtime_ms": 1481.2606250634417,
+        "device": "mps",
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000018_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000018_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000018_A.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-ylrn_zsi/native_before.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-ylrn_zsi/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000018_B.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-ylrn_zsi/native_after.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-ylrn_zsi/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            280,
+            23,
+            298,
+            16,
+            4,
+            306,
+            24,
+            428,
+            232,
+            410,
+            60,
+            12,
+            372,
+            313,
+            3
+          ],
+          "process_peak_rss_bytes": 3588243456,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 1.582
+    },
+    {
+      "index": 5,
+      "before": "test_000019_A.png",
+      "after": "test_000019_B.png",
+      "references": [
+        " the trees have been replaced by many buildings .",
+        " trees are replaced by residential buildings and the old arc dirt road is rebuilt .",
+        " a winding road is built and many houses are constructed around it to replace the former vegetation .",
+        " houses and roads take place of forest and spare ground .",
+        " the road is reconstructed with houses built alongside ."
+      ],
+      "reference_text": " the trees have been replaced by many buildings . |  trees are replaced by residential buildings and the old arc dirt road is rebuilt . |  a winding road is built and many houses are constructed around it to replace the former vegetation . |  houses and roads take place of forest and spare ground . |  the road is reconstructed with houses built alongside .",
+      "predicted": "the vegetation is replaced by the road",
+      "concerns": "",
+      "device": "mps",
+      "metadata": {
+        "model_name": "Chg2Cap",
+        "version": "chg2cap-7b8cda9-best",
+        "runtime_ms": 1454.926082980819,
+        "device": "mps",
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000019_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000019_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000019_A.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-64npesx8/native_before.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-64npesx8/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/change/test_000019_B.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-64npesx8/native_after.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-64npesx8/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            402,
+            195,
+            301,
+            65,
+            372,
+            312,
+            3
+          ],
+          "process_peak_rss_bytes": 3588276224,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 1.556
+    }
+  ]
+}

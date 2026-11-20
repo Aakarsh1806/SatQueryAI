@@ -1,0 +1,1934 @@
+{
+  "timestamp": "2026-11-11T10:14:39.305279+00:00",
+  "fresh_database": true,
+  "fresh_uploads": true,
+  "tests": "117 passed, 1 skipped, 144 warnings in 32.32s",
+  "scenarios": [
+    {
+      "scenario": "a_question",
+      "files": [
+        "model1/P0003_0002.png"
+      ],
+      "query": "What color are the large vehicles seen in the image?",
+      "seconds": 10.029,
+      "statuses": [
+        "running",
+        "done"
+      ],
+      "job": {
+        "progress_message": "done",
+        "elapsed_seconds": null,
+        "cancellation_requested": false,
+        "request_id": "30f09807-43ca-49cd-8451-aa2805e38f17",
+        "time": "2026-11-11T10:14:14.076807",
+        "query": "What color are the large vehicles seen in the image?",
+        "task": "qa",
+        "model_id": "rs_vlm",
+        "status": "done",
+        "error": null,
+        "input_explanation": null,
+        "execution_type": "live",
+        "result": {
+          "answer": "Yellow",
+          "evidence": null,
+          "confidence": {
+            "value": 0.7417714297771454,
+            "calibrated": false,
+            "note": "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+          },
+          "metadata": {
+            "model_name": "RS-VLM",
+            "version": "qwen2.5-vl-3b-lora-r32",
+            "runtime_ms": 2131.6407079575583,
+            "device": "mps",
+            "parameters": {
+              "prompt": "What color are the large vehicles seen in the image? Answer with a short phrase.",
+              "task": "qa",
+              "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+              "min_pixels": 100352,
+              "max_pixels": 313600,
+              "dtype": "torch.bfloat16",
+              "do_sample": false,
+              "max_new_tokens": 20,
+              "strict_load": {
+                "strict": true,
+                "adapter_tensors": 696,
+                "verified_values": true
+              },
+              "token_count": 2,
+              "preprocessing_notes": [
+                {
+                  "operation": "prepare_for",
+                  "model_id": "rs_vlm",
+                  "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                  "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+                  "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/native_rgb.png",
+                  "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/display_rgb.png",
+                  "shape": [
+                    512,
+                    512,
+                    3
+                  ]
+                }
+              ],
+              "process_peak_rss_bytes": 1094844416,
+              "mps_current_allocated_bytes": 7710393856
+            },
+            "mode": "real",
+            "execution_type": "live",
+            "demo_info": {},
+            "fallback_reason": null,
+            "confidence_reason": null,
+            "validation_status": "VRSBench val 20-sample sanity check: exact match 40%, lenient match 40%; full-benchmark scores not supplied",
+            "warnings": []
+          }
+        },
+        "routing": {
+          "task": "qa",
+          "model_id": "rs_vlm",
+          "confidence_of_routing": 0.8,
+          "reasons": [
+            "One optical image with no caption/location keyword defaults to short-phrase QA."
+          ]
+        },
+        "preview_urls": [
+          "/api/assets/30f09807-43ca-49cd-8451-aa2805e38f17/preview_0.png"
+        ],
+        "evidence_overlay_urls": [],
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+        ],
+        "summary": "Yellow",
+        "trace_url": "/api/traces/30f09807-43ca-49cd-8451-aa2805e38f17",
+        "artifacts_expired": false,
+        "uploads": [
+          {
+            "filename": "P0003_0002.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 468784,
+            "width": 512,
+            "height": 512
+          }
+        ]
+      },
+      "trace": {
+        "request_id": "30f09807-43ca-49cd-8451-aa2805e38f17",
+        "timestamp": "2026-11-11T10:14:14.081321+00:00",
+        "query": "What color are the large vehicles seen in the image?",
+        "validation": {
+          "valid": true,
+          "images": [
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 512,
+              "height": 512,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 252.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            }
+          ]
+        },
+        "detected_modalities": [
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          }
+        ],
+        "routing": {
+          "task": "qa",
+          "model_id": "rs_vlm",
+          "confidence_of_routing": 0.8,
+          "reasons": [
+            "One optical image with no caption/location keyword defaults to short-phrase QA."
+          ]
+        },
+        "chosen_model": {
+          "id": "rs_vlm",
+          "version": "qwen2.5-vl-3b-lora-r32",
+          "configured_mode": "real",
+          "mode": "real",
+          "fallback_reason": null
+        },
+        "preprocessing_steps": [
+          {
+            "operation": "prepare_for",
+            "model_id": "rs_vlm",
+            "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+            "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+            "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/native_rgb.png",
+            "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/display_rgb.png",
+            "shape": [
+              512,
+              512,
+              3
+            ]
+          }
+        ],
+        "parameters": {
+          "prompt": "What color are the large vehicles seen in the image? Answer with a short phrase.",
+          "task": "qa",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1094844416,
+          "mps_current_allocated_bytes": 7710393856
+        },
+        "runtime_ms": 9962.271666969173,
+        "device": "mps",
+        "output": {
+          "request_id": "30f09807-43ca-49cd-8451-aa2805e38f17",
+          "success": true,
+          "result": {
+            "answer": "Yellow",
+            "evidence": null,
+            "confidence": {
+              "value": 0.7417714297771454,
+              "calibrated": false,
+              "note": "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+            },
+            "metadata": {
+              "model_name": "RS-VLM",
+              "version": "qwen2.5-vl-3b-lora-r32",
+              "runtime_ms": 2131.6407079575583,
+              "device": "mps",
+              "parameters": {
+                "prompt": "What color are the large vehicles seen in the image? Answer with a short phrase.",
+                "task": "qa",
+                "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+                "min_pixels": 100352,
+                "max_pixels": 313600,
+                "dtype": "torch.bfloat16",
+                "do_sample": false,
+                "max_new_tokens": 20,
+                "strict_load": {
+                  "strict": true,
+                  "adapter_tensors": 696,
+                  "verified_values": true
+                },
+                "token_count": 2,
+                "preprocessing_notes": [
+                  {
+                    "operation": "prepare_for",
+                    "model_id": "rs_vlm",
+                    "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                    "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/30f09807-43ca-49cd-8451-aa2805e38f17/0_P0003_0002.png",
+                    "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/native_rgb.png",
+                    "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/display_rgb.png",
+                    "shape": [
+                      512,
+                      512,
+                      3
+                    ]
+                  }
+                ],
+                "process_peak_rss_bytes": 1094844416,
+                "mps_current_allocated_bytes": 7710393856
+              },
+              "mode": "real",
+              "execution_type": "live",
+              "demo_info": {},
+              "fallback_reason": null,
+              "confidence_reason": null,
+              "validation_status": "VRSBench val 20-sample sanity check: exact match 40%, lenient match 40%; full-benchmark scores not supplied",
+              "warnings": []
+            }
+          },
+          "routing": {
+            "task": "qa",
+            "model_id": "rs_vlm",
+            "confidence_of_routing": 0.8,
+            "reasons": [
+              "One optical image with no caption/location keyword defaults to short-phrase QA."
+            ]
+          },
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/30f09807-43ca-49cd-8451-aa2805e38f17/display_rgb.png"
+          ],
+          "warnings": [
+            "No georeferencing; CRS and footprint checks are skipped.",
+            "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+            "Routing confidence is a heuristic score, not calibrated model confidence.",
+            "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+          ],
+          "summary": "Yellow",
+          "error": null,
+          "input_explanation": null
+        },
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+        ],
+        "errors": [],
+        "lifecycle": {
+          "exclusive_model_lock": true,
+          "loaded": true,
+          "unloaded": true
+        },
+        "execution_type": "live",
+        "cancelled": false,
+        "api_artifacts": {
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/30f09807-43ca-49cd-8451-aa2805e38f17/preview_0.png"
+          ],
+          "evidence_overlays": []
+        }
+      }
+    },
+    {
+      "scenario": "b_caption",
+      "files": [
+        "model1/P0019_0021.png"
+      ],
+      "query": "Describe this image",
+      "seconds": 11.759,
+      "statuses": [
+        "running",
+        "done"
+      ],
+      "job": {
+        "progress_message": "done",
+        "elapsed_seconds": null,
+        "cancellation_requested": false,
+        "request_id": "0562cc32-cf0e-419d-b10c-5ad821a57e9f",
+        "time": "2026-11-11T10:14:24.118579",
+        "query": "Describe this image",
+        "task": "caption",
+        "model_id": "rs_vlm",
+        "status": "done",
+        "error": null,
+        "input_explanation": null,
+        "execution_type": "live",
+        "result": {
+          "answer": "The high-resolution image from GoogleEarth shows an area with multiple buildings and surrounding vegetation. There is a structure located at the top-left corner of the frame, adjacent to what appears to be a body of water. Another building is positioned towards the bottom-right corner of the frame. The environment includes paths and areas with grass and trees.",
+          "evidence": null,
+          "confidence": {
+            "value": 0.4265464301874389,
+            "calibrated": false,
+            "note": "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+          },
+          "metadata": {
+            "model_name": "RS-VLM",
+            "version": "qwen2.5-vl-3b-lora-r32",
+            "runtime_ms": 6021.837583975866,
+            "device": "mps",
+            "parameters": {
+              "prompt": "Describe this satellite image in detail.",
+              "task": "caption",
+              "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+              "min_pixels": 100352,
+              "max_pixels": 313600,
+              "dtype": "torch.bfloat16",
+              "do_sample": false,
+              "max_new_tokens": 128,
+              "strict_load": {
+                "strict": true,
+                "adapter_tensors": 696,
+                "verified_values": true
+              },
+              "token_count": 67,
+              "preprocessing_notes": [
+                {
+                  "operation": "prepare_for",
+                  "model_id": "rs_vlm",
+                  "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                  "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+                  "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/native_rgb.png",
+                  "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/display_rgb.png",
+                  "shape": [
+                    512,
+                    512,
+                    3
+                  ]
+                }
+              ],
+              "process_peak_rss_bytes": 1210269696,
+              "mps_current_allocated_bytes": 7751941120
+            },
+            "mode": "real",
+            "execution_type": "live",
+            "demo_info": {},
+            "fallback_reason": null,
+            "confidence_reason": null,
+            "validation_status": "VRSBench val 20-sample sanity check: exact match 40%, lenient match 40%; full-benchmark scores not supplied",
+            "warnings": []
+          }
+        },
+        "routing": {
+          "task": "caption",
+          "model_id": "rs_vlm",
+          "confidence_of_routing": 0.98,
+          "reasons": [
+            "An explicit describe/caption/summarize request selects the fixed caption prompt."
+          ]
+        },
+        "preview_urls": [
+          "/api/assets/0562cc32-cf0e-419d-b10c-5ad821a57e9f/preview_0.png"
+        ],
+        "evidence_overlay_urls": [],
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+        ],
+        "summary": "The high-resolution image from GoogleEarth shows an area with multiple buildings and surrounding vegetation. There is a structure located at the top-left corner of the frame, adjacent to what appears to be a body of water. Another building is positioned towards the bottom-right corner of the frame. The environment includes paths and areas with grass and trees.",
+        "trace_url": "/api/traces/0562cc32-cf0e-419d-b10c-5ad821a57e9f",
+        "artifacts_expired": false,
+        "uploads": [
+          {
+            "filename": "P0019_0021.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 475689,
+            "width": 512,
+            "height": 512
+          }
+        ]
+      },
+      "trace": {
+        "request_id": "0562cc32-cf0e-419d-b10c-5ad821a57e9f",
+        "timestamp": "2026-11-11T10:14:24.120062+00:00",
+        "query": "Describe this image",
+        "validation": {
+          "valid": true,
+          "images": [
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 512,
+              "height": 512,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 1.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 1.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 1.0,
+                  "max": 255.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            }
+          ]
+        },
+        "detected_modalities": [
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          }
+        ],
+        "routing": {
+          "task": "caption",
+          "model_id": "rs_vlm",
+          "confidence_of_routing": 0.98,
+          "reasons": [
+            "An explicit describe/caption/summarize request selects the fixed caption prompt."
+          ]
+        },
+        "chosen_model": {
+          "id": "rs_vlm",
+          "version": "qwen2.5-vl-3b-lora-r32",
+          "configured_mode": "real",
+          "mode": "real",
+          "fallback_reason": null
+        },
+        "preprocessing_steps": [
+          {
+            "operation": "prepare_for",
+            "model_id": "rs_vlm",
+            "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+            "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+            "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/native_rgb.png",
+            "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/display_rgb.png",
+            "shape": [
+              512,
+              512,
+              3
+            ]
+          }
+        ],
+        "parameters": {
+          "prompt": "Describe this satellite image in detail.",
+          "task": "caption",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 128,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 67,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1210269696,
+          "mps_current_allocated_bytes": 7751941120
+        },
+        "runtime_ms": 11696.789041976444,
+        "device": "mps",
+        "output": {
+          "request_id": "0562cc32-cf0e-419d-b10c-5ad821a57e9f",
+          "success": true,
+          "result": {
+            "answer": "The high-resolution image from GoogleEarth shows an area with multiple buildings and surrounding vegetation. There is a structure located at the top-left corner of the frame, adjacent to what appears to be a body of water. Another building is positioned towards the bottom-right corner of the frame. The environment includes paths and areas with grass and trees.",
+            "evidence": null,
+            "confidence": {
+              "value": 0.4265464301874389,
+              "calibrated": false,
+              "note": "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+            },
+            "metadata": {
+              "model_name": "RS-VLM",
+              "version": "qwen2.5-vl-3b-lora-r32",
+              "runtime_ms": 6021.837583975866,
+              "device": "mps",
+              "parameters": {
+                "prompt": "Describe this satellite image in detail.",
+                "task": "caption",
+                "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+                "min_pixels": 100352,
+                "max_pixels": 313600,
+                "dtype": "torch.bfloat16",
+                "do_sample": false,
+                "max_new_tokens": 128,
+                "strict_load": {
+                  "strict": true,
+                  "adapter_tensors": 696,
+                  "verified_values": true
+                },
+                "token_count": 67,
+                "preprocessing_notes": [
+                  {
+                    "operation": "prepare_for",
+                    "model_id": "rs_vlm",
+                    "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                    "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/0562cc32-cf0e-419d-b10c-5ad821a57e9f/0_P0019_0021.png",
+                    "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/native_rgb.png",
+                    "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/display_rgb.png",
+                    "shape": [
+                      512,
+                      512,
+                      3
+                    ]
+                  }
+                ],
+                "process_peak_rss_bytes": 1210269696,
+                "mps_current_allocated_bytes": 7751941120
+              },
+              "mode": "real",
+              "execution_type": "live",
+              "demo_info": {},
+              "fallback_reason": null,
+              "confidence_reason": null,
+              "validation_status": "VRSBench val 20-sample sanity check: exact match 40%, lenient match 40%; full-benchmark scores not supplied",
+              "warnings": []
+            }
+          },
+          "routing": {
+            "task": "caption",
+            "model_id": "rs_vlm",
+            "confidence_of_routing": 0.98,
+            "reasons": [
+              "An explicit describe/caption/summarize request selects the fixed caption prompt."
+            ]
+          },
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/0562cc32-cf0e-419d-b10c-5ad821a57e9f/display_rgb.png"
+          ],
+          "warnings": [
+            "No georeferencing; CRS and footprint checks are skipped.",
+            "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+            "Routing confidence is a heuristic score, not calibrated model confidence.",
+            "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+          ],
+          "summary": "The high-resolution image from GoogleEarth shows an area with multiple buildings and surrounding vegetation. There is a structure located at the top-left corner of the frame, adjacent to what appears to be a body of water. Another building is positioned towards the bottom-right corner of the frame. The environment includes paths and areas with grass and trees.",
+          "error": null,
+          "input_explanation": null
+        },
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "uncalibrated mean generated-token probability (includes EOS when generated); not an accuracy guarantee"
+        ],
+        "errors": [],
+        "lifecycle": {
+          "exclusive_model_lock": true,
+          "loaded": true,
+          "unloaded": true
+        },
+        "execution_type": "live",
+        "cancelled": false,
+        "api_artifacts": {
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/0562cc32-cf0e-419d-b10c-5ad821a57e9f/preview_0.png"
+          ],
+          "evidence_overlays": []
+        }
+      }
+    },
+    {
+      "scenario": "c_grounding",
+      "files": [
+        "grounding/P0003_0002.png"
+      ],
+      "query": "Detect vehicles",
+      "seconds": 1.497,
+      "statuses": [
+        "running",
+        "done"
+      ],
+      "job": {
+        "progress_message": "done",
+        "elapsed_seconds": null,
+        "cancellation_requested": false,
+        "request_id": "5c0a6990-26b0-4f92-9db4-6f386832f1da",
+        "time": "2026-11-11T10:14:35.891441",
+        "query": "Detect vehicles",
+        "task": "grounding",
+        "model_id": "grounding",
+        "status": "done",
+        "error": null,
+        "input_explanation": null,
+        "execution_type": "live",
+        "result": {
+          "answer": "Located 2 candidate region(s) for \"detect vehicles.\".",
+          "evidence": {
+            "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/grounding_overlay.png",
+            "score_calibration": "uncalibrated",
+            "boxes": [
+              [
+                443.2980651855469,
+                152.11839294433594,
+                473.7431945800781,
+                188.3065643310547
+              ],
+              [
+                439.40081787109375,
+                417.20556640625,
+                468.1497802734375,
+                459.4217529296875
+              ]
+            ],
+            "labels": [
+              "detect vehicles",
+              "detect vehicles"
+            ],
+            "scores": [
+              0.4767843186855316,
+              0.46357962489128113
+            ]
+          },
+          "confidence": null,
+          "metadata": {
+            "model_name": "Grounding DINO",
+            "version": "grounding-dino-vrsbench-step1300",
+            "runtime_ms": 368.8418749952689,
+            "device": "mps",
+            "parameters": {
+              "prompt": "detect vehicles.",
+              "box_threshold": 0.3,
+              "text_threshold": 0.25,
+              "training_image_size": 512,
+              "strict_load": {
+                "strict": true,
+                "missing_keys": [],
+                "unexpected_keys": [],
+                "mismatched_keys": [],
+                "training_image_size": 512
+              },
+              "device_fallback": null,
+              "preprocessing_notes": [
+                {
+                  "operation": "prepare_for",
+                  "model_id": "grounding",
+                  "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                  "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+                  "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/native_rgb.png",
+                  "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/display_rgb.png",
+                  "shape": [
+                    512,
+                    512,
+                    3
+                  ]
+                }
+              ]
+            },
+            "mode": "real",
+            "execution_type": "live",
+            "demo_info": {},
+            "fallback_reason": null,
+            "confidence_reason": "not available",
+            "validation_status": "unvalidated: no trainer benchmark metrics provided; local 10-sample sanity check mean IoU 0.3673, Acc@0.5 40% (not a benchmark)",
+            "warnings": [
+              "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+              "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+            ]
+          }
+        },
+        "routing": {
+          "task": "grounding",
+          "model_id": "grounding",
+          "confidence_of_routing": 0.95,
+          "reasons": [
+            "A location/detection keyword selects grounding (boxes only, no masks)."
+          ]
+        },
+        "preview_urls": [
+          "/api/assets/5c0a6990-26b0-4f92-9db4-6f386832f1da/preview_0.png"
+        ],
+        "evidence_overlay_urls": [
+          "/api/assets/5c0a6990-26b0-4f92-9db4-6f386832f1da/grounding_overlay.png"
+        ],
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ],
+        "summary": "Returned candidate boxes in original-image pixel coordinates; grounding is unvalidated and no masks are produced.",
+        "trace_url": "/api/traces/5c0a6990-26b0-4f92-9db4-6f386832f1da",
+        "artifacts_expired": false,
+        "uploads": [
+          {
+            "filename": "P0003_0002.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 468784,
+            "width": 512,
+            "height": 512
+          }
+        ]
+      },
+      "trace": {
+        "request_id": "5c0a6990-26b0-4f92-9db4-6f386832f1da",
+        "timestamp": "2026-11-11T10:14:35.893165+00:00",
+        "query": "Detect vehicles",
+        "validation": {
+          "valid": true,
+          "images": [
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 512,
+              "height": 512,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 252.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            }
+          ]
+        },
+        "detected_modalities": [
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          }
+        ],
+        "routing": {
+          "task": "grounding",
+          "model_id": "grounding",
+          "confidence_of_routing": 0.95,
+          "reasons": [
+            "A location/detection keyword selects grounding (boxes only, no masks)."
+          ]
+        },
+        "chosen_model": {
+          "id": "grounding",
+          "version": "grounding-dino-vrsbench-step1300",
+          "configured_mode": "real",
+          "mode": "real",
+          "fallback_reason": null
+        },
+        "preprocessing_steps": [
+          {
+            "operation": "prepare_for",
+            "model_id": "grounding",
+            "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+            "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+            "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/native_rgb.png",
+            "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/display_rgb.png",
+            "shape": [
+              512,
+              512,
+              3
+            ]
+          }
+        ],
+        "parameters": {
+          "prompt": "detect vehicles.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/native_rgb.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "runtime_ms": 1434.2169590527192,
+        "device": "mps",
+        "output": {
+          "request_id": "5c0a6990-26b0-4f92-9db4-6f386832f1da",
+          "success": true,
+          "result": {
+            "answer": "Located 2 candidate region(s) for \"detect vehicles.\".",
+            "evidence": {
+              "overlay_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/grounding_overlay.png",
+              "score_calibration": "uncalibrated",
+              "boxes": [
+                [
+                  443.2980651855469,
+                  152.11839294433594,
+                  473.7431945800781,
+                  188.3065643310547
+                ],
+                [
+                  439.40081787109375,
+                  417.20556640625,
+                  468.1497802734375,
+                  459.4217529296875
+                ]
+              ],
+              "labels": [
+                "detect vehicles",
+                "detect vehicles"
+              ],
+              "scores": [
+                0.4767843186855316,
+                0.46357962489128113
+              ]
+            },
+            "confidence": null,
+            "metadata": {
+              "model_name": "Grounding DINO",
+              "version": "grounding-dino-vrsbench-step1300",
+              "runtime_ms": 368.8418749952689,
+              "device": "mps",
+              "parameters": {
+                "prompt": "detect vehicles.",
+                "box_threshold": 0.3,
+                "text_threshold": 0.25,
+                "training_image_size": 512,
+                "strict_load": {
+                  "strict": true,
+                  "missing_keys": [],
+                  "unexpected_keys": [],
+                  "mismatched_keys": [],
+                  "training_image_size": 512
+                },
+                "device_fallback": null,
+                "preprocessing_notes": [
+                  {
+                    "operation": "prepare_for",
+                    "model_id": "grounding",
+                    "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+                    "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/5c0a6990-26b0-4f92-9db4-6f386832f1da/0_P0003_0002.png",
+                    "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/native_rgb.png",
+                    "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/display_rgb.png",
+                    "shape": [
+                      512,
+                      512,
+                      3
+                    ]
+                  }
+                ]
+              },
+              "mode": "real",
+              "execution_type": "live",
+              "demo_info": {},
+              "fallback_reason": null,
+              "confidence_reason": "not available",
+              "validation_status": "unvalidated: no trainer benchmark metrics provided; local 10-sample sanity check mean IoU 0.3673, Acc@0.5 40% (not a benchmark)",
+              "warnings": [
+                "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+                "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+              ]
+            }
+          },
+          "routing": {
+            "task": "grounding",
+            "model_id": "grounding",
+            "confidence_of_routing": 0.95,
+            "reasons": [
+              "A location/detection keyword selects grounding (boxes only, no masks)."
+            ]
+          },
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/5c0a6990-26b0-4f92-9db4-6f386832f1da/display_rgb.png"
+          ],
+          "warnings": [
+            "No georeferencing; CRS and footprint checks are skipped.",
+            "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+            "Routing confidence is a heuristic score, not calibrated model confidence.",
+            "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+            "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+          ],
+          "summary": "Returned candidate boxes in original-image pixel coordinates; grounding is unvalidated and no masks are produced.",
+          "error": null,
+          "input_explanation": null
+        },
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ],
+        "errors": [],
+        "lifecycle": {
+          "exclusive_model_lock": true,
+          "loaded": true,
+          "unloaded": true
+        },
+        "execution_type": "live",
+        "cancelled": false,
+        "api_artifacts": {
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/5c0a6990-26b0-4f92-9db4-6f386832f1da/preview_0.png"
+          ],
+          "evidence_overlays": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/5c0a6990-26b0-4f92-9db4-6f386832f1da/grounding_overlay.png"
+          ]
+        }
+      }
+    },
+    {
+      "scenario": "d_change",
+      "files": [
+        "change/test_000004_A.png",
+        "change/test_000004_B.png"
+      ],
+      "query": "What changed between these images?",
+      "seconds": 1.814,
+      "statuses": [
+        "running",
+        "done"
+      ],
+      "job": {
+        "progress_message": "done",
+        "elapsed_seconds": null,
+        "cancellation_requested": false,
+        "request_id": "fb21b713-4471-43b1-b05a-224adf7b8db3",
+        "time": "2026-11-11T10:14:37.406834",
+        "query": "What changed between these images?",
+        "task": "change_caption",
+        "model_id": "change",
+        "status": "done",
+        "error": null,
+        "input_explanation": null,
+        "execution_type": "live",
+        "result": {
+          "answer": "the woods are removed and a t-shaped road with villas built along the roads",
+          "evidence": null,
+          "confidence": null,
+          "metadata": {
+            "model_name": "Chg2Cap",
+            "version": "chg2cap-7b8cda9-best",
+            "runtime_ms": 227.33887494541705,
+            "device": "mps",
+            "parameters": {
+              "normalization": {
+                "normalization": "upstream",
+                "mean": [
+                  100.679,
+                  99.5023,
+                  84.9932
+                ],
+                "std": [
+                  50.982,
+                  48.4838,
+                  44.7057
+                ],
+                "confirmed": false
+              },
+              "preprocessing_notes": [
+                {
+                  "operation": "check_pair",
+                  "mode": "before/after",
+                  "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+                  "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+                  "bounds": null,
+                  "crs": null,
+                  "warnings": [
+                    "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+                  ]
+                },
+                {
+                  "operation": "normalize_change",
+                  "normalization": "upstream",
+                  "mean": [
+                    100.67900085449219,
+                    99.5022964477539,
+                    84.99320220947266
+                  ],
+                  "std": [
+                    50.981998443603516,
+                    48.48379898071289,
+                    44.7056999206543
+                  ],
+                  "divided_by_255": false,
+                  "confirmed": false,
+                  "input": "before",
+                  "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+                  "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_before.png",
+                  "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_before.png",
+                  "shape": [
+                    1,
+                    3,
+                    256,
+                    256
+                  ]
+                },
+                {
+                  "operation": "normalize_change",
+                  "normalization": "upstream",
+                  "mean": [
+                    100.67900085449219,
+                    99.5022964477539,
+                    84.99320220947266
+                  ],
+                  "std": [
+                    50.981998443603516,
+                    48.48379898071289,
+                    44.7056999206543
+                  ],
+                  "divided_by_255": false,
+                  "confirmed": false,
+                  "input": "after",
+                  "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+                  "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_after.png",
+                  "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_after.png",
+                  "shape": [
+                    1,
+                    3,
+                    256,
+                    256
+                  ]
+                }
+              ],
+              "strict_load": [
+                {
+                  "component": "encoder_dict",
+                  "keys": 624,
+                  "strict": true
+                },
+                {
+                  "component": "encoder_trans_dict",
+                  "keys": 80,
+                  "strict": true
+                },
+                {
+                  "component": "decoder_dict",
+                  "keys": 52,
+                  "strict": true
+                }
+              ],
+              "token_ids": [
+                2,
+                372,
+                432,
+                23,
+                298,
+                16,
+                4,
+                368,
+                312,
+                428,
+                410,
+                60,
+                12,
+                372,
+                313,
+                3
+              ],
+              "process_peak_rss_bytes": 3531898880,
+              "mps_current_allocated_bytes": 1319407872
+            },
+            "mode": "real",
+            "execution_type": "live",
+            "demo_info": {},
+            "fallback_reason": null,
+            "confidence_reason": "not available",
+            "validation_status": "test BLEU-4 0.542, ROUGE-L 0.727, CIDEr 1.29 on the LEVIR-CC test split, METEOR not computed",
+            "warnings": []
+          }
+        },
+        "routing": {
+          "task": "change_caption",
+          "model_id": "change",
+          "confidence_of_routing": 1.0,
+          "reasons": [
+            "Two optical images select Chg2Cap (A=before, B=after).",
+            "This model produces a description of changes, not a direct answer to change questions or a change map."
+          ]
+        },
+        "preview_urls": [
+          "/api/assets/fb21b713-4471-43b1-b05a-224adf7b8db3/preview_0.png",
+          "/api/assets/fb21b713-4471-43b1-b05a-224adf7b8db3/preview_1.png"
+        ],
+        "evidence_overlay_urls": [],
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Two optical images select Chg2Cap (A=before, B=after).",
+          "This model produces a description of changes, not a direct answer to change questions or a change map.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified.",
+          "Chg2Cap preprocessing is UNCONFIRMED for this checkpoint; using the configured normalization without per-image percentile stretching."
+        ],
+        "summary": "Returned a description comparing before A with after B; not a direct answer or change map.",
+        "trace_url": "/api/traces/fb21b713-4471-43b1-b05a-224adf7b8db3",
+        "artifacts_expired": false,
+        "uploads": [
+          {
+            "filename": "test_000004_A.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 139766,
+            "width": 256,
+            "height": 256
+          },
+          {
+            "filename": "test_000004_B.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 136313,
+            "width": 256,
+            "height": 256
+          }
+        ]
+      },
+      "trace": {
+        "request_id": "fb21b713-4471-43b1-b05a-224adf7b8db3",
+        "timestamp": "2026-11-11T10:14:37.408814+00:00",
+        "query": "What changed between these images?",
+        "validation": {
+          "valid": true,
+          "images": [
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 256,
+              "height": 256,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 0.0,
+                  "max": 231.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 224.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 189.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            },
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 256,
+              "height": 256,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            }
+          ]
+        },
+        "detected_modalities": [
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          },
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          }
+        ],
+        "routing": {
+          "task": "change_caption",
+          "model_id": "change",
+          "confidence_of_routing": 1.0,
+          "reasons": [
+            "Two optical images select Chg2Cap (A=before, B=after).",
+            "This model produces a description of changes, not a direct answer to change questions or a change map."
+          ]
+        },
+        "chosen_model": {
+          "id": "change",
+          "version": "chg2cap-7b8cda9-best",
+          "configured_mode": "real",
+          "mode": "real",
+          "fallback_reason": null
+        },
+        "preprocessing_steps": [
+          {
+            "operation": "check_pair",
+            "mode": "before/after",
+            "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+            "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+            "bounds": null,
+            "crs": null,
+            "warnings": [
+              "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+            ]
+          },
+          {
+            "operation": "normalize_change",
+            "normalization": "upstream",
+            "mean": [
+              100.67900085449219,
+              99.5022964477539,
+              84.99320220947266
+            ],
+            "std": [
+              50.981998443603516,
+              48.48379898071289,
+              44.7056999206543
+            ],
+            "divided_by_255": false,
+            "confirmed": false,
+            "input": "before",
+            "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+            "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_before.png",
+            "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_before.png",
+            "shape": [
+              1,
+              3,
+              256,
+              256
+            ]
+          },
+          {
+            "operation": "normalize_change",
+            "normalization": "upstream",
+            "mean": [
+              100.67900085449219,
+              99.5022964477539,
+              84.99320220947266
+            ],
+            "std": [
+              50.981998443603516,
+              48.48379898071289,
+              44.7056999206543
+            ],
+            "divided_by_255": false,
+            "confirmed": false,
+            "input": "after",
+            "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+            "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_after.png",
+            "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_after.png",
+            "shape": [
+              1,
+              3,
+              256,
+              256
+            ]
+          }
+        ],
+        "parameters": {
+          "normalization": {
+            "normalization": "upstream",
+            "mean": [
+              100.679,
+              99.5023,
+              84.9932
+            ],
+            "std": [
+              50.982,
+              48.4838,
+              44.7057
+            ],
+            "confirmed": false
+          },
+          "preprocessing_notes": [
+            {
+              "operation": "check_pair",
+              "mode": "before/after",
+              "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+              "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+              "bounds": null,
+              "crs": null,
+              "warnings": [
+                "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "before",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_before.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_before.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            },
+            {
+              "operation": "normalize_change",
+              "normalization": "upstream",
+              "mean": [
+                100.67900085449219,
+                99.5022964477539,
+                84.99320220947266
+              ],
+              "std": [
+                50.981998443603516,
+                48.48379898071289,
+                44.7056999206543
+              ],
+              "divided_by_255": false,
+              "confirmed": false,
+              "input": "after",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+              "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_after.png",
+              "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_after.png",
+              "shape": [
+                1,
+                3,
+                256,
+                256
+              ]
+            }
+          ],
+          "strict_load": [
+            {
+              "component": "encoder_dict",
+              "keys": 624,
+              "strict": true
+            },
+            {
+              "component": "encoder_trans_dict",
+              "keys": 80,
+              "strict": true
+            },
+            {
+              "component": "decoder_dict",
+              "keys": 52,
+              "strict": true
+            }
+          ],
+          "token_ids": [
+            2,
+            372,
+            432,
+            23,
+            298,
+            16,
+            4,
+            368,
+            312,
+            428,
+            410,
+            60,
+            12,
+            372,
+            313,
+            3
+          ],
+          "process_peak_rss_bytes": 3531898880,
+          "mps_current_allocated_bytes": 1319407872
+        },
+        "runtime_ms": 1751.5366250881925,
+        "device": "mps",
+        "output": {
+          "request_id": "fb21b713-4471-43b1-b05a-224adf7b8db3",
+          "success": true,
+          "result": {
+            "answer": "the woods are removed and a t-shaped road with villas built along the roads",
+            "evidence": null,
+            "confidence": null,
+            "metadata": {
+              "model_name": "Chg2Cap",
+              "version": "chg2cap-7b8cda9-best",
+              "runtime_ms": 227.33887494541705,
+              "device": "mps",
+              "parameters": {
+                "normalization": {
+                  "normalization": "upstream",
+                  "mean": [
+                    100.679,
+                    99.5023,
+                    84.9932
+                  ],
+                  "std": [
+                    50.982,
+                    48.4838,
+                    44.7057
+                  ],
+                  "confirmed": false
+                },
+                "preprocessing_notes": [
+                  {
+                    "operation": "check_pair",
+                    "mode": "before/after",
+                    "source_a": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+                    "source_b": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+                    "bounds": null,
+                    "crs": null,
+                    "warnings": [
+                      "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified."
+                    ]
+                  },
+                  {
+                    "operation": "normalize_change",
+                    "normalization": "upstream",
+                    "mean": [
+                      100.67900085449219,
+                      99.5022964477539,
+                      84.99320220947266
+                    ],
+                    "std": [
+                      50.981998443603516,
+                      48.48379898071289,
+                      44.7056999206543
+                    ],
+                    "divided_by_255": false,
+                    "confirmed": false,
+                    "input": "before",
+                    "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/0_test_000004_A.png",
+                    "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_before.png",
+                    "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_before.png",
+                    "shape": [
+                      1,
+                      3,
+                      256,
+                      256
+                    ]
+                  },
+                  {
+                    "operation": "normalize_change",
+                    "normalization": "upstream",
+                    "mean": [
+                      100.67900085449219,
+                      99.5022964477539,
+                      84.99320220947266
+                    ],
+                    "std": [
+                      50.981998443603516,
+                      48.48379898071289,
+                      44.7056999206543
+                    ],
+                    "divided_by_255": false,
+                    "confirmed": false,
+                    "input": "after",
+                    "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/fb21b713-4471-43b1-b05a-224adf7b8db3/1_test_000004_B.png",
+                    "native_path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/native_after.png",
+                    "preview": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_after.png",
+                    "shape": [
+                      1,
+                      3,
+                      256,
+                      256
+                    ]
+                  }
+                ],
+                "strict_load": [
+                  {
+                    "component": "encoder_dict",
+                    "keys": 624,
+                    "strict": true
+                  },
+                  {
+                    "component": "encoder_trans_dict",
+                    "keys": 80,
+                    "strict": true
+                  },
+                  {
+                    "component": "decoder_dict",
+                    "keys": 52,
+                    "strict": true
+                  }
+                ],
+                "token_ids": [
+                  2,
+                  372,
+                  432,
+                  23,
+                  298,
+                  16,
+                  4,
+                  368,
+                  312,
+                  428,
+                  410,
+                  60,
+                  12,
+                  372,
+                  313,
+                  3
+                ],
+                "process_peak_rss_bytes": 3531898880,
+                "mps_current_allocated_bytes": 1319407872
+              },
+              "mode": "real",
+              "execution_type": "live",
+              "demo_info": {},
+              "fallback_reason": null,
+              "confidence_reason": "not available",
+              "validation_status": "test BLEU-4 0.542, ROUGE-L 0.727, CIDEr 1.29 on the LEVIR-CC test split, METEOR not computed",
+              "warnings": []
+            }
+          },
+          "routing": {
+            "task": "change_caption",
+            "model_id": "change",
+            "confidence_of_routing": 1.0,
+            "reasons": [
+              "Two optical images select Chg2Cap (A=before, B=after).",
+              "This model produces a description of changes, not a direct answer to change questions or a change map."
+            ]
+          },
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_before.png",
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/prepared/fb21b713-4471-43b1-b05a-224adf7b8db3/display_after.png"
+          ],
+          "warnings": [
+            "No georeferencing; CRS and footprint checks are skipped.",
+            "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+            "Two optical images select Chg2Cap (A=before, B=after).",
+            "This model produces a description of changes, not a direct answer to change questions or a change map.",
+            "Routing confidence is a heuristic score, not calibrated model confidence.",
+            "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified.",
+            "Chg2Cap preprocessing is UNCONFIRMED for this checkpoint; using the configured normalization without per-image percentile stretching."
+          ],
+          "summary": "Returned a description comparing before A with after B; not a direct answer or change map.",
+          "error": null,
+          "input_explanation": null
+        },
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+          "Two optical images select Chg2Cap (A=before, B=after).",
+          "This model produces a description of changes, not a direct answer to change questions or a change map.",
+          "Routing confidence is a heuristic score, not calibrated model confidence.",
+          "Georeferencing is missing for one or both images; CRS and overlap checks were skipped. Same-area correspondence is unverified.",
+          "Chg2Cap preprocessing is UNCONFIRMED for this checkpoint; using the configured normalization without per-image percentile stretching."
+        ],
+        "errors": [],
+        "lifecycle": {
+          "exclusive_model_lock": true,
+          "loaded": true,
+          "unloaded": true
+        },
+        "execution_type": "live",
+        "cancelled": false,
+        "api_artifacts": {
+          "previews": [
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/fb21b713-4471-43b1-b05a-224adf7b8db3/preview_0.png",
+            "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/public/fb21b713-4471-43b1-b05a-224adf7b8db3/preview_1.png"
+          ],
+          "evidence_overlays": []
+        }
+      }
+    },
+    {
+      "scenario": "e_failure",
+      "files": [
+        "model1/P0003_0002.png"
+      ],
+      "query": "What changed between these images?",
+      "seconds": 0.061,
+      "statuses": [
+        "running",
+        "failed"
+      ],
+      "job": {
+        "progress_message": "failed",
+        "elapsed_seconds": null,
+        "cancellation_requested": false,
+        "request_id": "40e72b6d-fc27-4d34-840f-59290130edc4",
+        "time": "2026-11-11T10:14:39.243540",
+        "query": "What changed between these images?",
+        "task": null,
+        "model_id": null,
+        "status": "failed",
+        "error": "This task needs two images: upload before and after optical images for change analysis.",
+        "input_explanation": null,
+        "execution_type": null,
+        "result": null,
+        "routing": null,
+        "preview_urls": [],
+        "evidence_overlay_urls": [],
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery."
+        ],
+        "summary": "This task needs two images: upload before and after optical images for change analysis.",
+        "trace_url": "/api/traces/40e72b6d-fc27-4d34-840f-59290130edc4",
+        "artifacts_expired": false,
+        "uploads": [
+          {
+            "filename": "P0003_0002.png",
+            "modality": "optical",
+            "bands": 3,
+            "size": 468784,
+            "width": 512,
+            "height": 512
+          }
+        ]
+      },
+      "trace": {
+        "request_id": "40e72b6d-fc27-4d34-840f-59290130edc4",
+        "timestamp": "2026-11-11T10:14:39.244885+00:00",
+        "query": "What changed between these images?",
+        "validation": {
+          "valid": false,
+          "images": [
+            {
+              "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/40e72b6d-fc27-4d34-840f-59290130edc4/0_P0003_0002.png",
+              "band_count": 3,
+              "dtype": "uint8",
+              "dtypes": [
+                "uint8",
+                "uint8",
+                "uint8"
+              ],
+              "width": 512,
+              "height": 512,
+              "crs": null,
+              "resolution": null,
+              "nodata": null,
+              "bounds": null,
+              "band_descriptions": [
+                null,
+                null,
+                null
+              ],
+              "georeferenced": false,
+              "warnings": [
+                "No georeferencing; CRS and footprint checks are skipped."
+              ],
+              "value_ranges": [
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 255.0
+                },
+                {
+                  "min": 0.0,
+                  "max": 252.0
+                }
+              ],
+              "guessed_modality": "optical",
+              "modality": "optical",
+              "modality_reason": "Three or more bands suggest optical imagery."
+            }
+          ]
+        },
+        "detected_modalities": [
+          {
+            "path": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/.demo-rehearsal/20261111T101340Z-7ebf55/uploads/raw/40e72b6d-fc27-4d34-840f-59290130edc4/0_P0003_0002.png",
+            "guess": "optical",
+            "modality": "optical",
+            "reason": "Three or more bands suggest optical imagery."
+          }
+        ],
+        "routing": null,
+        "chosen_model": null,
+        "preprocessing_steps": [],
+        "parameters": {},
+        "runtime_ms": 7.853667018935084,
+        "device": null,
+        "output": {
+          "request_id": "40e72b6d-fc27-4d34-840f-59290130edc4",
+          "success": false,
+          "result": null,
+          "routing": null,
+          "previews": [],
+          "warnings": [
+            "No georeferencing; CRS and footprint checks are skipped.",
+            "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery."
+          ],
+          "summary": "This task needs two images: upload before and after optical images for change analysis.",
+          "error": "This task needs two images: upload before and after optical images for change analysis.",
+          "input_explanation": null
+        },
+        "warnings": [
+          "No georeferencing; CRS and footprint checks are skipped.",
+          "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery."
+        ],
+        "errors": [
+          {
+            "stage": "validation",
+            "type": "AgentInputError",
+            "message": "This task needs two images: upload before and after optical images for change analysis."
+          }
+        ],
+        "cancelled": false,
+        "api_artifacts": {
+          "previews": [],
+          "evidence_overlays": []
+        }
+      }
+    },
+    {
+      "scenario": "f_fusion_status",
+      "status": "stub; no samples found; no real pair verified",
+      "model": {
+        "id": "fusion",
+        "display_name": "SEN12MS Fusion",
+        "accepted_inputs": [
+          "optical+sar"
+        ],
+        "tasks": [
+          "classification"
+        ],
+        "output_type": "class_top3",
+        "version": "stub-v1",
+        "weights_path": "weights/SatQuery_Model4_Handover/model",
+        "enabled": true,
+        "mode": "stub",
+        "preprocessing": {},
+        "settings": {
+          "activation_reason": "Check script has not passed on a genuine sample: no sample images supplied. Reported metrics do not establish a local check pass."
+        },
+        "validation_status": "SEN12MS summer test: accuracy 76.2%, macro-F1 62.9%, weak classes Grassland, Forest, Wetlands",
+        "configured_mode": "stub",
+        "fallback_reason": "Check script has not passed on a genuine sample: no sample images supplied. Reported metrics do not establish a local check pass.",
+        "availability_note": "Adapter implemented; no real aligned pair verified. Keep stub until pairs are checked."
+      }
+    }
+  ]
+}

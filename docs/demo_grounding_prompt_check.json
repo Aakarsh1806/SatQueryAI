@@ -1,0 +1,105 @@
+{
+  "query": "Detect vehicles",
+  "image": "grounding/P0003_0002.png",
+  "result": {
+    "request_id": "c3abac6a-97a0-4fa3-9fc4-6b364558820c",
+    "success": true,
+    "result": {
+      "answer": "Located 2 candidate region(s) for \"detect vehicles.\".",
+      "evidence": {
+        "overlay_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/tmp7bxdf8gd/uploads/c3abac6a-97a0-4fa3-9fc4-6b364558820c/grounding_overlay.png",
+        "score_calibration": "uncalibrated",
+        "boxes": [
+          [
+            443.2980651855469,
+            152.11839294433594,
+            473.7431945800781,
+            188.3065643310547
+          ],
+          [
+            439.40081787109375,
+            417.20556640625,
+            468.1497802734375,
+            459.4217529296875
+          ]
+        ],
+        "labels": [
+          "detect vehicles",
+          "detect vehicles"
+        ],
+        "scores": [
+          0.4767843186855316,
+          0.46357962489128113
+        ]
+      },
+      "confidence": null,
+      "metadata": {
+        "model_name": "Grounding DINO",
+        "version": "grounding-dino-vrsbench-step1300",
+        "runtime_ms": 408.7099159369245,
+        "device": "mps",
+        "parameters": {
+          "prompt": "detect vehicles.",
+          "box_threshold": 0.3,
+          "text_threshold": 0.25,
+          "training_image_size": 512,
+          "strict_load": {
+            "strict": true,
+            "missing_keys": [],
+            "unexpected_keys": [],
+            "mismatched_keys": [],
+            "training_image_size": 512
+          },
+          "device_fallback": null,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "grounding",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "data_samples/grounding/P0003_0002.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/tmp7bxdf8gd/uploads/c3abac6a-97a0-4fa3-9fc4-6b364558820c/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/tmp7bxdf8gd/uploads/c3abac6a-97a0-4fa3-9fc4-6b364558820c/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ]
+        },
+        "mode": "real",
+        "execution_type": "live",
+        "demo_info": {},
+        "fallback_reason": null,
+        "confidence_reason": "not available",
+        "validation_status": "unvalidated: no trainer benchmark metrics provided; local 10-sample sanity check mean IoU 0.3673, Acc@0.5 40% (not a benchmark)",
+        "warnings": [
+          "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+          "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+        ]
+      }
+    },
+    "routing": {
+      "task": "grounding",
+      "model_id": "grounding",
+      "confidence_of_routing": 0.95,
+      "reasons": [
+        "A location/detection keyword selects grounding (boxes only, no masks)."
+      ]
+    },
+    "previews": [
+      "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/tmp7bxdf8gd/uploads/c3abac6a-97a0-4fa3-9fc4-6b364558820c/display_rgb.png"
+    ],
+    "warnings": [
+      "No georeferencing; CRS and footprint checks are skipped.",
+      "Domain gap: models trained on VRSBench, LEVIR-CC, or Sentinel data may perform poorly on different imagery.",
+      "Routing confidence is a heuristic score, not calibrated model confidence.",
+      "Grounding has no trainer-supplied benchmark metrics. Local small-sample sanity checks do not establish benchmark accuracy.",
+      "Per-box scores are uncalibrated; there is no supported aggregate answer confidence."
+    ],
+    "summary": "Returned candidate boxes in original-image pixel coordinates; grounding is unvalidated and no masks are produced.",
+    "error": null,
+    "trace_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/tmp7bxdf8gd/traces/c3abac6a-97a0-4fa3-9fc4-6b364558820c.json",
+    "input_explanation": null
+  }
+}

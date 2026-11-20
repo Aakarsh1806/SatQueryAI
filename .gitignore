@@ -1,0 +1,48 @@
+weights/
+uploads/
+traces/
+.venv/
+node_modules/
+*.db
+*.pth
+*.safetensors
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment and OS files
+.env
+.DS_Store
+
+# Frontend build output
+frontend/dist/
+
+# Academic-use evaluation inputs: keep provenance/instructions, not payloads.
+/data_samples/**
+!/data_samples/**/
+!/data_samples/**/README.md
+!/data_samples/README.md
+/docs/box_check.png
+
+# Local dataset directories: ~/Datasets (/Users/sriaakarsh/Datasets) is outside this Git worktree.
+/Datasets/
+/datasets/
+/Users/sriaakarsh/Datasets/
+
+# Evaluation overlays contain academic-use source image pixels.
+/docs/model2_examples/*.png
+
+# Local credentials and pre-computed academic-use demo artifacts
+.env.*
+!.env.example
+.secrets/
+/demo/**
+!/demo/README.md
+.release-logs/
+/docs/screenshots/precomputed-playback.png
+
+# Fresh, local demo rehearsal databases/uploads and academic-use screenshots
+.demo-rehearsal/
+/docs/screenshots/final-demo-*.png

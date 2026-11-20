@@ -1,0 +1,26 @@
+[
+  {
+    "id": "a_question",
+    "status": "done",
+    "execution_type": "pre-computed",
+    "model_loaded": false
+  },
+  {
+    "id": "b_caption",
+    "status": "done",
+    "execution_type": "pre-computed",
+    "model_loaded": false
+  },
+  {
+    "id": "c_grounding",
+    "status": "done",
+    "execution_type": "pre-computed",
+    "model_loaded": false
+  },
+  {
+    "id": "d_change",
+    "status": "done",
+    "execution_type": "pre-computed",
+    "model_loaded": false
+  }
+]

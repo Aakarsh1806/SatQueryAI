@@ -1,0 +1,70 @@
+services:
+  backend:
+    image: satquery-backend:local
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        INSTALL_ML: ${INSTALL_ML:-false}
+    environment:
+      DATABASE_URL: ${DOCKER_DATABASE_URL:-sqlite:////var/lib/satquery/satquery.db}
+      SATQUERY_STORAGE_DIR: /var/lib/satquery/uploads
+      SATQUERY_TRACE_DIR: /var/lib/satquery/traces
+      SATQUERY_MODELS_CONFIG: /app/backend/models.yaml
+      SATQUERY_DEVICE: ${SATQUERY_DEVICE:-cpu}
+      SATQUERY_RS_VLM_MODE: ${SATQUERY_RS_VLM_MODE:-}
+      SATQUERY_GROUNDING_MODE: ${SATQUERY_GROUNDING_MODE:-}
+      SATQUERY_CHANGE_MODE: ${SATQUERY_CHANGE_MODE:-}
+      SATQUERY_FUSION_MODE: ${SATQUERY_FUSION_MODE:-}
+      SATQUERY_RETENTION_DAYS: ${SATQUERY_RETENTION_DAYS:-1}
+      SATQUERY_MAX_UPLOAD_BYTES: ${SATQUERY_MAX_UPLOAD_BYTES:-20971520}
+      SATQUERY_MAX_REQUEST_BYTES: ${SATQUERY_MAX_REQUEST_BYTES:-42991616}
+      SATQUERY_CORS_ORIGINS: ${SATQUERY_CORS_ORIGINS:-http://localhost:8080,http://localhost:5173,http://127.0.0.1:5173}
+      SATQUERY_RS_VLM_WEIGHTS_PATH: ${SATQUERY_RS_VLM_WEIGHTS_PATH:-/app/weights/satquery_rsvlm_lora}
+      SATQUERY_GROUNDING_WEIGHTS_PATH: ${SATQUERY_GROUNDING_WEIGHTS_PATH:-/app/weights/SatQuery_Model2_Handover}
+      SATQUERY_CHANGE_WEIGHTS_PATH: ${SATQUERY_CHANGE_WEIGHTS_PATH:-/app/weights/chg2cap_3h/run_01/best.pth}
+      SATQUERY_FUSION_WEIGHTS_PATH: ${SATQUERY_FUSION_WEIGHTS_PATH:-/app/weights/SatQuery_Model4_Handover/model}
+      DEMO_MODE: ${DEMO_MODE:-false}
+      DEMO_MANIFEST: /app/demo/manifest.json
+    ports: ["127.0.0.1:8000:8000"]
+    volumes:
+      - ${WEIGHTS_DIR:-./weights}:/app/weights:ro
+      - ${MODELS_CONFIG_FILE:-./backend/models.yaml}:/app/backend/models.yaml:ro
+      - ${DEMO_DIR:-./demo}:/app/demo:ro
+      - app_data:/var/lib/satquery
+      - hf_cache:/var/cache/huggingface
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    ports: ["127.0.0.1:8080:80"]
+    depends_on:
+      backend:
+        condition: service_healthy
+  postgres:
+    image: postgres:16-alpine
+    profiles: [postgres]
+    environment:
+      POSTGRES_DB: satquery
+      POSTGRES_USER: satquery
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets: [postgres_password]
+    ports: ["127.0.0.1:${POSTGRES_PORT:-5432}:5432"]
+    volumes: [postgres_data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U satquery -d satquery"]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+volumes:
+  app_data:
+  hf_cache:
+  postgres_data:
+secrets:
+  postgres_password:
+    file: ${POSTGRES_PASSWORD_FILE:-./.secrets/postgres_password}

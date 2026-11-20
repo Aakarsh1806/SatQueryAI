@@ -1,0 +1,1119 @@
+{
+  "timestamp": "2026-11-11T09:18:58.525398+00:00",
+  "summary": {
+    "samples": 20,
+    "errors": 0,
+    "exact_match": "8/20 (40.0%)",
+    "lenient_match": "8/20 (40.0%)",
+    "total_seconds": 167.727
+  },
+  "environment": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "transformers": "5.22.2",
+    "peft": "0.21.2",
+    "pycocoevalcap": "1.2"
+  },
+  "results": [
+    {
+      "index": 1,
+      "image": "P0003_0002.png",
+      "question": "What color are the large vehicles seen in the image?",
+      "reference": "Yellow",
+      "predicted": "Yellow",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "What color are the large vehicles seen in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 13089.813750004396,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What color are the large vehicles seen in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0003_0002.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-pa_3bmd7/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-pa_3bmd7/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1061339136,
+          "mps_current_allocated_bytes": 7710393856
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 13.405
+    },
+    {
+      "index": 2,
+      "image": "P0003_0004.png",
+      "question": "How many vehicles are visible in the image?",
+      "reference": "3",
+      "predicted": "2",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many vehicles are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 9180.888875038363,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many vehicles are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0003_0004.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-xqc3g6px/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-xqc3g6px/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710320128
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 9.748
+    },
+    {
+      "index": 3,
+      "image": "P0007_0001.png",
+      "question": "How many small vehicles are visible?",
+      "reference": "1",
+      "predicted": "1",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "How many small vehicles are visible? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7085.719624999911,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many small vehicles are visible? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0007_0001.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-9kl2cocq/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-9kl2cocq/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710246400
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.406
+    },
+    {
+      "index": 4,
+      "image": "P0007_0004.png",
+      "question": "What is the predominant color of the large vehicles?",
+      "reference": "white",
+      "predicted": "White",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "What is the predominant color of the large vehicles? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 10056.256040930748,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What is the predominant color of the large vehicles? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0007_0004.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-te3ssiwf/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-te3ssiwf/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 10.504
+    },
+    {
+      "index": 5,
+      "image": "P0007_0005.png",
+      "question": "How many large vehicles are visible?",
+      "reference": "4",
+      "predicted": "2",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many large vehicles are visible? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7109.400208923034,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many large vehicles are visible? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0007_0005.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-3aw5pifk/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-3aw5pifk/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710246400
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.421
+    },
+    {
+      "index": 6,
+      "image": "P0007_0006.png",
+      "question": "How many large vehicles are in the image?",
+      "reference": "5",
+      "predicted": "10",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many large vehicles are in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7057.833292055875,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many large vehicles are in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 3,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0007_0006.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-uj01pb6x/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-uj01pb6x/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710964992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.652
+    },
+    {
+      "index": 7,
+      "image": "P0007_0009.png",
+      "question": "What type of vehicles are mainly visible in the image?",
+      "reference": "large-vehicle",
+      "predicted": "Small-vehicle",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "What type of vehicles are mainly visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7077.7292920975015,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What type of vehicles are mainly visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 4,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0007_0009.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-h2yjp4wm/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-h2yjp4wm/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7711683584
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.364
+    },
+    {
+      "index": 8,
+      "image": "P0019_0000.png",
+      "question": "What type of area is visible in the image?",
+      "reference": "residential",
+      "predicted": "rural",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "What type of area is visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 6682.963500032201,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What type of area is visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 3,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0000.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-izcezjje/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-izcezjje/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7711001856
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 6.967
+    },
+    {
+      "index": 9,
+      "image": "P0019_0001.png",
+      "question": "Is there a vehicle present in the image?",
+      "reference": "Yes",
+      "predicted": "Yes",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "Is there a vehicle present in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7497.518541989848,
+        "device": "mps",
+        "parameters": {
+          "prompt": "Is there a vehicle present in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0001.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-wai5g9l2/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-wai5g9l2/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710320128
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.788
+    },
+    {
+      "index": 10,
+      "image": "P0019_0002.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "3",
+      "predicted": "2",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 6592.003166908398,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0002.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-rn2lbrhk/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-rn2lbrhk/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.006
+    },
+    {
+      "index": 11,
+      "image": "P0019_0003.png",
+      "question": "What is the primary natural feature shown in the image?",
+      "reference": "Body of water",
+      "predicted": "Waterbody",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "What is the primary natural feature shown in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7471.526584005915,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What is the primary natural feature shown in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 3,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0003.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-c3em2uvu/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-c3em2uvu/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7711038720
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 8.161
+    },
+    {
+      "index": 12,
+      "image": "P0019_0004.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "2",
+      "predicted": "2",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 9244.482209091075,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0004.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-gth16tgs/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-gth16tgs/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 9.666
+    },
+    {
+      "index": 13,
+      "image": "P0019_0005.png",
+      "question": "How many small vehicles can be seen in the image?",
+      "reference": "2",
+      "predicted": "1",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many small vehicles can be seen in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7172.873584087938,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many small vehicles can be seen in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0005.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-f9dpreh0/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-f9dpreh0/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710393856
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.503
+    },
+    {
+      "index": 14,
+      "image": "P0019_0006.png",
+      "question": "How many small vehicles are clearly visible in the image?",
+      "reference": "4",
+      "predicted": "1",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many small vehicles are clearly visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7987.070541945286,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many small vehicles are clearly visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0006.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-897t_bd1/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-897t_bd1/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710393856
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 8.291
+    },
+    {
+      "index": 15,
+      "image": "P0019_0007.png",
+      "question": "What color is the small vehicle at the top-right position?",
+      "reference": "White",
+      "predicted": "White",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "What color is the small vehicle at the top-right position? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 8801.458665984683,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What color is the small vehicle at the top-right position? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0007.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-lywocu_b/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-lywocu_b/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710430720
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 9.118
+    },
+    {
+      "index": 16,
+      "image": "P0019_0009.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "4",
+      "predicted": "2",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7170.534792006947,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0009.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-rvjau0e5/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-rvjau0e5/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.485
+    },
+    {
+      "index": 17,
+      "image": "P0019_0012.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "3",
+      "predicted": "2",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7663.101874990389,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0012.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-al_ry1y7/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-al_ry1y7/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 8.076
+    },
+    {
+      "index": 18,
+      "image": "P0019_0016.png",
+      "question": "What object is visible on the driveway?",
+      "reference": "small-vehicle",
+      "predicted": "Vehicle",
+      "exact": false,
+      "lenient": false,
+      "device": "mps",
+      "prompt": "What object is visible on the driveway? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 8002.682958031073,
+        "device": "mps",
+        "parameters": {
+          "prompt": "What object is visible on the driveway? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0016.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-w_4yiy37/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-w_4yiy37/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710283264
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 8.36
+    },
+    {
+      "index": 19,
+      "image": "P0019_0017.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "2",
+      "predicted": "2",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7790.653874981217,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0017.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-gl0zk9ql/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-gl0zk9ql/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 8.15
+    },
+    {
+      "index": 20,
+      "image": "P0019_0020.png",
+      "question": "How many harbors are visible in the image?",
+      "reference": "2",
+      "predicted": "2",
+      "exact": true,
+      "lenient": true,
+      "device": "mps",
+      "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+      "metadata": {
+        "model_name": "RS-VLM",
+        "version": "qwen2.5-vl-3b-lora-r32",
+        "runtime_ms": 7211.292208987288,
+        "device": "mps",
+        "parameters": {
+          "prompt": "How many harbors are visible in the image? Answer with a short phrase.",
+          "base_model": "Qwen/Qwen2.5-VL-3B-Instruct",
+          "min_pixels": 100352,
+          "max_pixels": 313600,
+          "dtype": "torch.bfloat16",
+          "do_sample": false,
+          "max_new_tokens": 20,
+          "strict_load": {
+            "strict": true,
+            "adapter_tensors": 696,
+            "verified_values": true
+          },
+          "token_count": 2,
+          "preprocessing_notes": [
+            {
+              "operation": "prepare_for",
+              "model_id": "rs_vlm",
+              "model_native": "RGB HWC, 0\u2013255; no percentile stretch",
+              "source": "/Users/sriaakarsh/Documents/CODES/SatQuery-AI/data_samples/model1/P0019_0020.png",
+              "native_path": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-pi5ws16c/native_rgb.png",
+              "preview": "/var/folders/8s/rcz6hsns09z_rnlhry3nnqmc0000gn/T/satquery-prepare-pi5ws16c/display_rgb.png",
+              "shape": [
+                512,
+                512,
+                3
+              ]
+            }
+          ],
+          "process_peak_rss_bytes": 1166196736,
+          "mps_current_allocated_bytes": 7710356992
+        },
+        "mode": "real",
+        "fallback_reason": null,
+        "confidence_reason": null,
+        "validation_status": null,
+        "warnings": []
+      },
+      "seconds": 7.656
+    }
+  ]
+}

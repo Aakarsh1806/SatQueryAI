@@ -1,0 +1,18 @@
+{
+  "rs_vlm": {
+    "status": "skipped",
+    "reason": "no samples found; no model loaded"
+  },
+  "grounding": {
+    "status": "skipped",
+    "reason": "no samples found; no model loaded"
+  },
+  "change": {
+    "status": "skipped",
+    "reason": "no samples found; no model loaded"
+  },
+  "fusion": {
+    "status": "skipped",
+    "reason": "no samples found; no model loaded"
+  }
+}

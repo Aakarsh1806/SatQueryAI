@@ -1,0 +1,82 @@
+models:
+- id: rs_vlm
+  display_name: RS-VLM
+  accepted_inputs:
+  - 1 optical
+  tasks:
+  - qa
+  - caption
+  output_type: text
+  version: qwen2.5-vl-3b-lora-r32
+  weights_path: weights/satquery_rsvlm_lora
+  settings:
+    dtype: bfloat16
+    min_pixels: 100352
+    max_pixels: 313600
+    qa_max_new_tokens: 20
+    caption_max_new_tokens: 128
+    activation_reason: Local real-adapter sanity checks passed; choosing stub still
+      produces synthetic output, not a validated prediction.
+  enabled: true
+  mode: real
+  validation_status: 'VRSBench val 20-sample sanity check: exact match 40%, lenient
+    match 40%; full-benchmark scores not supplied'
+- id: grounding
+  display_name: Grounding DINO
+  validation_status: 'unvalidated: no trainer benchmark metrics provided; local 10-sample
+    sanity check mean IoU 0.3673, Acc@0.5 40% (not a benchmark)'
+  accepted_inputs:
+  - 1 optical
+  tasks:
+  - grounding
+  output_type: boxes
+  version: grounding-dino-vrsbench-step1300
+  weights_path: weights/SatQuery_Model2_Handover
+  enabled: true
+  mode: real
+  settings:
+    activation_reason: Local real-adapter sanity checks passed; choosing stub still
+      produces synthetic output, not a validated prediction.
+- id: change
+  display_name: Chg2Cap
+  accepted_inputs:
+  - 2 optical
+  tasks:
+  - change_caption
+  output_type: text
+  version: chg2cap-7b8cda9-best
+  weights_path: weights/chg2cap_3h/run_01/best.pth
+  preprocessing:
+    normalization: upstream
+    mean:
+    - 100.679
+    - 99.5023
+    - 84.9932
+    std:
+    - 50.982
+    - 48.4838
+    - 44.7057
+    confirmed: false
+  enabled: true
+  mode: real
+  validation_status: User-reported full test BLEU-4 0.542, ROUGE-L 0.727, CIDEr 1.29
+    on the LEVIR-CC test split, METEOR not computed
+  settings:
+    activation_reason: Local real-adapter sanity checks passed; choosing stub still
+      produces synthetic output, not a validated prediction.
+- id: fusion
+  display_name: SEN12MS Fusion
+  validation_status: 'Handover-reported SEN12MS summer test: accuracy 76.2%, macro-F1
+    62.9%, weak classes Grassland, Forest, Wetlands; no local real-pair verification'
+  accepted_inputs:
+  - optical+sar
+  tasks:
+  - classification
+  output_type: class_top3
+  version: sen12ms-summer-torchscript
+  weights_path: weights/SatQuery_Model4_Handover/model
+  enabled: true
+  mode: real
+  settings:
+    activation_reason: Real adapter enabled at user request before sample-pair verification;
+      genuine aligned test pairs are still missing.
